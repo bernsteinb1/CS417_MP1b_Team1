@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 451b75a2193e22f418879e9b129dd7fc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 381874
+  packageName: Ceramic Tiles Material Pack
+  packageVersion: 1.0
+  assetPath: Assets/CeramicTilesMaterialPack/Scenes/Demo HDRP/SkyandFogSettingsProfile.asset
+  uploadId: 920898
