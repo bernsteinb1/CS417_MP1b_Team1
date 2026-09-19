@@ -3,21 +3,14 @@ using UnityEngine;
 public class HandsWashed : MonoBehaviour
 {
      // Occurs the exact frame another collider enters the trigger
+    private bool firstTime = false;
+
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the object entering has the "Player" tag
-            Debug.Log("Player entered the trigger zone!");
+        if (firstTime) return;
+        GameObject pref = Resources.Load<GameObject>("RedKey");
+        Instantiate(pref, new Vector3(-3.81509995f,1.07589996f,3.6078999f), Quaternion.identity);
+        firstTime = false;
     }
 
-    // Occurs every frame another collider stays inside the trigger
-    private void OnTriggerStay(Collider other)
-    {
-            Debug.Log("Player is inside the trigger zone...");
-    }
-
-    // Occurs the exact frame another collider leaves the trigger
-    private void OnTriggerExit(Collider other)
-    {
-            Debug.Log("Player left the trigger zone.");
-        }
 }
