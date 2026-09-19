@@ -584,7 +584,7 @@ MonoBehaviour:
   - {fileID: -3114979889818431875}
   - {fileID: -1817611129841072977}
   - {fileID: 2853333299942382359}
-  - {fileID: -7029209626409365470}
+  - {fileID: 364928940728574887}
   - {fileID: -26494318086686771}
   - {fileID: 5068984703427264858}
   - {fileID: -1106792459749628967}
@@ -1159,6 +1159,28 @@ MonoBehaviour:
   targetOpenXRApiVersion: 
   required: 0
   customRuntimeLoaderName: 
+--- !u!114 &-712110722882824174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c36843bac48b29469f79baf3c98f9b6, type: 3}
+  m_Name: AndroidXRHandMeshData Standalone
+  m_EditorClassIdentifier: Unity.XR.AndroidOpenXR::UnityEngine.XR.OpenXR.Features.Android.AndroidXRHandMeshData
+  m_enabled: 0
+  nameUi: 'Android XR: Hand Mesh Data'
+  version: 0.1.0
+  featureIdInternal: com.unity.openxr.feature.androidxr-hand-mesh-data
+  openxrExtensionStrings: XR_ANDROID_hand_mesh
+  company: Unity Technologies
+  priority: 0
+  targetOpenXRApiVersion: 
+  required: 0
+  customRuntimeLoaderName: 
 --- !u!114 &-680252551431418083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1503,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c36843bac48b29469f79baf3c98f9b6, type: 3}
-  m_Name: AndroidXRHandMeshData Standalone
+  m_Name: AndroidXRHandMeshData Android
   m_EditorClassIdentifier: Unity.XR.AndroidOpenXR::UnityEngine.XR.OpenXR.Features.Android.AndroidXRHandMeshData
   m_enabled: 0
   nameUi: 'Android XR: Hand Mesh Data'
@@ -1953,9 +1975,8 @@ MonoBehaviour:
   features:
   - {fileID: -6081091880544760470}
   - {fileID: -2577987003101816992}
-  - {fileID: 364928940728574887}
-  - {fileID: -446760756579398772}
   - {fileID: -2492941002456306891}
+  - {fileID: -446760756579398772}
   - {fileID: -6980824795560526636}
   - {fileID: -7921917043694303376}
   - {fileID: 9013182346661059473}
@@ -1965,6 +1986,7 @@ MonoBehaviour:
   - {fileID: -8348561754607689907}
   - {fileID: 8522934531131945873}
   - {fileID: 2614574186381899348}
+  - {fileID: -712110722882824174}
   - {fileID: 1373821442497918605}
   - {fileID: 202949650828763708}
   - {fileID: 215932126684994722}
