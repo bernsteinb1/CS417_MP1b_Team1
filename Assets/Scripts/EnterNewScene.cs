@@ -3,22 +3,28 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-public class EnterRightRoom : MonoBehaviour
+public class EnterNewScene : MonoBehaviour
 {
     public InputActionReference b;
+    public string newRoom;
+    public Vector3 targetPos;
     // public XROrigin XRO;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         b.action.performed += (ctx) =>
         {
-            SceneManager.LoadScene(0);
+            SceneSwitcher.SwitchScene(newRoom, targetPos);
         };
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        b.action.Enable();
+    }
+    
+    void OnDisable()
+    {
+        b.action.Disable();
     }
 }
