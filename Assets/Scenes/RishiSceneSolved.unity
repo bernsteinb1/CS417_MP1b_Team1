@@ -2750,7 +2750,7 @@ MonoBehaviour:
   - {fileID: 1815318736}
   - {fileID: 352763871}
   speakerSource: {fileID: 25378284}
-  lockdownClip: {fileID: 8300000, guid: c0e0b00cdc3e15741948df65dbce65db, type: 3}
+  lockdownClip: {fileID: 8300000, guid: deb7727ef7a71ff448586a022dc50b2c, type: 3}
   unlockdownClip: {fileID: 8300000, guid: 4c26694b1ca0dbb469ad02d7e15769fd, type: 3}
   successClip: {fileID: 8300000, guid: d48131eadaa17b64490050b813834e00, type: 3}
   shrinkDuration: 1
