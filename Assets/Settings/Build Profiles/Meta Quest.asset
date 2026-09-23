@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4675440072193059001
+--- !u!114 &-6734403319083937976
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,21 +66,6 @@ MonoBehaviour:
     defines:
     - UNITY_PLATFORM_META_QUEST 1
     numInternalDefines: 1
---- !u!114 &-2823127788448050036
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 15010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Quality Settings
-  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfileQualitySettings
-  m_DefaultQualityLevel: Meta Quest (Build Profile)
-  m_QualityLevels:
-  - Meta Quest (Build Profile)
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +83,7 @@ MonoBehaviour:
   m_Subtarget: 0
   m_PlatformId: 80657fe557de4d17822398b3a01b8c9e
   m_PlatformBuildProfile:
-    rid: 395321135842459752
+    rid: 5274954817441366134
   m_ActivePlatformGuid: 
   m_AdditionalPlatformBuildSettings: []
   m_OverrideGlobalSceneList: 0
@@ -261,7 +246,7 @@ MonoBehaviour:
         type: 3}'
     - line: '|   - {fileID: -3766260557093437525, guid: c390cabae5b234d988cb6002ea2110e7,
         type: 2}'
-    - line: '|   - {fileID: -2224624525832480351, guid: 7ff5a1f3b19f34c9db66a3a3f66bbdad,
+    - line: '|   - {fileID: -2963319667575656385, guid: 7ff5a1f3b19f34c9db66a3a3f66bbdad,
         type: 2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
@@ -1071,7 +1056,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 395321135842459752
+    - rid: 5274954817441366134
       type: {class: AndroidPlatformBuildSettings, ns: UnityEditor.Android, asm: UnityEditor.Android.Extensions}
       data:
         m_Development: 0
@@ -1100,3 +1085,18 @@ MonoBehaviour:
         m_BuildAppBundle: 0
         m_IPAddressToConnect: 
         m_SymlinkSources: 0
+--- !u!114 &8615085809580627975
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 15010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Quality Settings
+  m_EditorClassIdentifier: UnityEditor.dll::UnityEditor.Build.Profile.BuildProfileQualitySettings
+  m_DefaultQualityLevel: Meta Quest (Build Profile)
+  m_QualityLevels:
+  - Meta Quest (Build Profile)
