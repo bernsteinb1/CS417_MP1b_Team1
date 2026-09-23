@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
@@ -23,6 +24,13 @@ public class DeskPaperPuzzleManager : MonoBehaviour {
 	public void Start() {
 		speakerSource.PlayOneShot(lockdownClip);
 	}
+
+	//Win debug key
+	//private void Update() {
+	//	if (Keyboard.current.spaceKey.wasPressedThisFrame) {
+	//		win();
+	//	}
+	//}
 
 	public void paperPlaced(SelectEnterEventArgs args) {
 		if (solved) return;
@@ -48,6 +56,11 @@ public class DeskPaperPuzzleManager : MonoBehaviour {
 
 		solved = true;
 
+		win();
+
+	}
+
+	private void win() {
 		foreach (GameObject p in new List<GameObject>(papers)) {
 			if (p == null) continue;
 			IXRSelectInteractable interactable = p.GetComponent<IXRSelectInteractable>();
@@ -63,6 +76,7 @@ public class DeskPaperPuzzleManager : MonoBehaviour {
 		speakerSource.PlayOneShot(unlockdownClip);
 		speakerSource.PlayOneShot(successClip);
 
+		GameStateManager.Instance.MarkSolved(Room.Classroom);
 		Debug.Log("YOU HAVE SOLVED THE PAPER PUZZLE");
 	}
 

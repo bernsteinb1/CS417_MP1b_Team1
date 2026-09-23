@@ -11,7 +11,7 @@ public class TrashPuzzleManager : MonoBehaviour {
 	[SerializeField] AudioClip shelfClip;
 	[SerializeField] float shrinkDuration = 1f;
 	[SerializeField] float raiseDuration = 5f;
-	[SerializeField] float raiseHeight = 2.5f;
+	[SerializeField] float raiseHeight = 3f;
 
 	bool redTrash = false;
 	bool greenTrash = false;
