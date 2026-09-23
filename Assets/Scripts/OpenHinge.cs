@@ -1,9 +1,13 @@
+using Unity.Mathematics;
 using UnityEngine;
 
 public class OpenHinge : MonoBehaviour
 {
     private JointSpring s;
-    private float velocity = 5;
+    private float velocity = 0;
+    float prev_error = 0;
+    public float acceleration;
+    public float dampingForce;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
     {
@@ -15,11 +19,13 @@ public class OpenHinge : MonoBehaviour
 
     void Update()
     {
+        velocity += acceleration * (-90 - s.targetPosition) + dampingForce * (-s.targetPosition);
+        velocity = math.min(velocity, -1);
         s.targetPosition += velocity * Time.deltaTime;
-        velocity -= 50 * Time.deltaTime; // acceleration term
-        velocity -= 120 * s.targetPosition / 90 * Time.deltaTime; // dampening term
-        if (s.targetPosition <= -90) {
+
+        if (s.targetPosition <= -88) {
             gameObject.GetComponent<HingeJoint>().useSpring = false;
+            velocity = 0;
             enabled = false;
         }
         gameObject.GetComponent<HingeJoint>().spring = s;
