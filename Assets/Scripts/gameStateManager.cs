@@ -39,9 +39,4 @@ public class GameStateManager : MonoBehaviour {
 		solvedRooms.Remove(room);
 		Debug.Log(room + " marked as unsolved");
 	}
-
-	public void SolveBathroom()
-	{
-		MarkSolved(Room.Bathroom);
-	}
 }

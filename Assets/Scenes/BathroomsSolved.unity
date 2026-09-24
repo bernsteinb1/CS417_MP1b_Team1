@@ -10473,11 +10473,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: newRoom
-      value: RishiSceneSolved
+      value: RishiScene
       objectReference: {fileID: 0}
     - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: targetPos.x
-      value: 3.4
+      value: 4.76
       objectReference: {fileID: 0}
     - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: targetPos.y
@@ -10485,7 +10485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: targetPos.z
-      value: -8.422
+      value: -2.04
       objectReference: {fileID: 0}
     - target: {fileID: 3047043410848966854, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: m_Name

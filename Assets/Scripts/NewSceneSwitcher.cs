@@ -44,7 +44,7 @@ public class NewSceneSwitcher : MonoBehaviour {
 	public void SwitchScene(string newSceneName, Vector3 newPos) {
 		if (newSceneName != "StevenScene" && newSceneName != "RishiScene" &&
 			newSceneName != "Bathrooms" && newSceneName != "GioScene") {
-			Debug.Log("INVALID SCENE NAME");
+			Debug.LogError("INVALID SCENE NAME");
 			return;
 		}
 		if (Time.frameCount == lastSwitchFrame) return;

@@ -8,6 +8,7 @@ public class OpenHinge : MonoBehaviour
     float prev_error = 0;
     public float acceleration;
     public float dampingForce;
+    private AudioSource se;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
     {
@@ -15,6 +16,8 @@ public class OpenHinge : MonoBehaviour
         JointLimits l = gameObject.GetComponent<HingeJoint>().limits;
         l.min = -90f;
         gameObject.GetComponent<HingeJoint>().limits = l;
+        se = gameObject.GetComponentInChildren<AudioSource>();
+        if (se != null) se.Play();
     }
 
     void Update()
@@ -26,6 +29,7 @@ public class OpenHinge : MonoBehaviour
         if (s.targetPosition <= -88) {
             gameObject.GetComponent<HingeJoint>().useSpring = false;
             velocity = 0;
+            if (se != null) se.Pause();
             enabled = false;
         }
         gameObject.GetComponent<HingeJoint>().spring = s;
