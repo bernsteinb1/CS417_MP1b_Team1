@@ -2747,7 +2747,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: In the event of a student attempting to change their grade and getting
-    locked in a room with the power going out please type the code 122333 to shut
+    locked in a room with the power going out please type the code '122333' to shut
     off the alarms and open the door.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7083,15 +7083,15 @@ MonoBehaviour:
 
 
     Can''t
-    say i never did anything for you, now hurry up!
+    say I never did anything for you, now hurry up!
 
 
     - Gio
 
 
-    P.S theres
-    one final puzzle in the professors office and theres a solve for then in each
-    room, including this one! maybe inside that locker...'
+    P.S there''s
+    one final puzzle in the professors office with a solve for it in each room, including
+    this one! maybe check inside that locker...'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
