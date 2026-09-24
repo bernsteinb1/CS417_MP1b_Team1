@@ -16,6 +16,9 @@ public class DeskPaperPuzzleManager : MonoBehaviour {
 	[SerializeField] AudioClip successClip;
 	[SerializeField] float shrinkDuration = 1f;
 
+	[SerializeField] GameObject bathroomsExit;
+	[SerializeField] GameObject officeExit;
+
 	List<GameObject> papers = new List<GameObject>();
 	string[] solution = { "yellow", "red", "white", "blue", "green" };
 	bool[] progress = { false, false, false, false, false };
@@ -75,6 +78,9 @@ public class DeskPaperPuzzleManager : MonoBehaviour {
 
 		speakerSource.PlayOneShot(unlockdownClip);
 		speakerSource.PlayOneShot(successClip);
+
+		bathroomsExit.SetActive(true);
+		officeExit.SetActive(true);
 
 		GameStateManager.Instance.MarkSolved(Room.Classroom);
 		Debug.Log("YOU HAVE SOLVED THE PAPER PUZZLE");
