@@ -15,27 +15,17 @@ public class OfficeProgressManager : MonoBehaviour
     public TMP_Text progressText;
 
     private bool exitOpened;
+    public bool IsComplete => cardReaderSolved && usbPortSolved && doorPanelSolved;
 
-    void Start()
-    {
-        UpdateProgressUI();
-    }
+    void Start() => UpdateProgressUI();
 
     public void CompleteLock(KeyIdentity.KeyType keyType)
     {
         switch (keyType)
         {
-            case KeyIdentity.KeyType.IDCard:
-                cardReaderSolved = true;
-                break;
-
-            case KeyIdentity.KeyType.USBDrive:
-                usbPortSolved = true;
-                break;
-
-            case KeyIdentity.KeyType.OverrideToken:
-                doorPanelSolved = true;
-                break;
+            case KeyIdentity.KeyType.IDCard: cardReaderSolved = true; break;
+            case KeyIdentity.KeyType.USBDrive: usbPortSolved = true; break;
+            case KeyIdentity.KeyType.OverrideToken: doorPanelSolved = true; break;
         }
 
         UpdateProgressUI();
@@ -44,40 +34,16 @@ public class OfficeProgressManager : MonoBehaviour
 
     void CheckForEscape()
     {
-        if (exitOpened)
-            return;
-
-        if (cardReaderSolved &&
-            usbPortSolved &&
-            doorPanelSolved)
-        {
-            exitOpened = true;
-
-            if (officeDoorMover != null)
-                officeDoorMover.MoveToTarget();
-
-            Debug.Log("All office locks solved. Exit opened.");
-        }
+        if (exitOpened || !IsComplete) return;
+        exitOpened = true;
+        if (officeDoorMover != null) officeDoorMover.MoveToTarget();
+        Debug.Log("All office locks solved. Exit opened.");
     }
 
     void UpdateProgressUI()
     {
-        if (progressText == null)
-            return;
-
-        int solved = 0;
-
-        if (cardReaderSolved)
-            solved++;
-
-        if (usbPortSolved)
-            solved++;
-
-        if (doorPanelSolved)
-            solved++;
-
-        progressText.text =
-            "OFFICE SECURITY\n" +
-            "LOCKS: " + solved + " / 3";
+        if (progressText == null) return;
+        int solved = (cardReaderSolved ? 1 : 0) + (usbPortSolved ? 1 : 0) + (doorPanelSolved ? 1 : 0);
+        progressText.text = $"OFFICE SECURITY\nLOCKS {solved}/3";
     }
 }

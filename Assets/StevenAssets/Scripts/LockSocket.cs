@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LockSocket : MonoBehaviour
 {
@@ -17,39 +18,30 @@ public class LockSocket : MonoBehaviour
     [Header("Optional Reveal / Animation")]
     public EasedMover successMover;
 
+    [Header("Solved Event")]
+    public UnityEvent onSolved = new UnityEvent();
+
     private bool solved;
+    public bool IsSolved => solved;
 
     void Start()
     {
         if (statusRenderer != null)
-        {
             statusRenderer.material.color = lockedColor;
-        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (solved)
-            return;
-
-        KeyIdentity key =
-            other.GetComponentInParent<KeyIdentity>();
-
-        if (key == null)
-            return;
-
-        if (key.keyType != requiredKey)
-            return;
-
+        if (solved) return;
+        KeyIdentity key = other.GetComponentInParent<KeyIdentity>();
+        if (key == null || key.keyType != requiredKey) return;
         Solve(key);
     }
 
     void Solve(KeyIdentity key)
     {
         solved = true;
-
         Rigidbody rb = key.GetComponent<Rigidbody>();
-
         if (rb != null)
         {
             rb.linearVelocity = Vector3.zero;
@@ -64,20 +56,15 @@ public class LockSocket : MonoBehaviour
         }
 
         if (statusRenderer != null)
-        {
             statusRenderer.material.color = unlockedColor;
-        }
 
         if (successMover != null)
-        {
             successMover.MoveToTarget();
-        }
 
         if (progressManager != null)
-        {
             progressManager.CompleteLock(requiredKey);
-        }
 
+        onSolved?.Invoke();
         Debug.Log(requiredKey + " lock solved.");
     }
 }
