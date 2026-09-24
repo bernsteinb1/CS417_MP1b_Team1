@@ -34,4 +34,9 @@ public class GameStateManager : MonoBehaviour {
 		solvedRooms.Add(room);
 		Debug.Log(room + " marked as solved");
 	}
+
+	public void MarkUnsolved(Room room) {
+		solvedRooms.Remove(room);
+		Debug.Log(room + " marked as unsolved");
+	}
 }
