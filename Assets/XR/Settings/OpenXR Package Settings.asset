@@ -16,7 +16,7 @@ MonoBehaviour:
   nameUi: 'Android XR: AR Anchor'
   version: 0.1.0
   featureIdInternal: com.unity.openxr.feature.arfoundation-androidxr-anchor
-  openxrExtensionStrings: XR_ANDROID_trackables
+  openxrExtensionStrings: XR_ANDROID_trackables XR_ANDROID_device_anchor_persistence
   company: Unity Technologies
   priority: 0
   targetOpenXRApiVersion: 
@@ -1159,8 +1159,13 @@ MonoBehaviour:
   - {fileID: -3298852055189654229}
   - {fileID: 2407984483019349941}
   - {fileID: -1097397020866388193}
+<<<<<<< HEAD
+  - {fileID: -1943078873448869967}
+  - {fileID: 8384790108940969250}
+=======
   - {fileID: -2952196681189996515}
   - {fileID: -8157975452360028667}
+>>>>>>> ff2c7489fa20ba1d2cd18eb3114e56d4fbd5f0d8
   - {fileID: -9073460757326384052}
   - {fileID: -1887194244641526999}
   - {fileID: 305975854441205216}
@@ -1589,7 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7365b139f7aec43b23d26b7a48b5a6, type: 3}
   m_Name: MetaQuestTouchPlusControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.MetaQuestTouchPlusControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Plus Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestplus
@@ -2116,7 +2121,7 @@ MonoBehaviour:
   nameUi: 'Android XR: AR Anchor'
   version: 0.1.0
   featureIdInternal: com.unity.openxr.feature.arfoundation-androidxr-anchor
-  openxrExtensionStrings: XR_ANDROID_trackables
+  openxrExtensionStrings: XR_ANDROID_trackables XR_ANDROID_device_anchor_persistence
   company: Unity Technologies
   priority: 0
   targetOpenXRApiVersion: 
@@ -2383,7 +2388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b862ee14fb479fbfe5fffe655d3ed3, type: 3}
   m_Name: MetaQuestTouchProControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.MetaQuestTouchProControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Pro Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestpro
@@ -2523,18 +2528,21 @@ MonoBehaviour:
   features:
   - {fileID: -4274376767887891261}
   - {fileID: -1534313340663491172}
+<<<<<<< HEAD
+=======
   - {fileID: 8899039156268209174}
   - {fileID: -2595635167768642405}
+>>>>>>> ff2c7489fa20ba1d2cd18eb3114e56d4fbd5f0d8
   - {fileID: 1975165635771122493}
-  - {fileID: -7220134379373794064}
-  - {fileID: 3257068013085502359}
-  - {fileID: -8687128444323276040}
   - {fileID: 6016870251309121466}
+<<<<<<< HEAD
+=======
   - {fileID: 3782860204883376647}
   - {fileID: -7479949955688168512}
   - {fileID: -2787515208932599470}
   - {fileID: 7466092087560952504}
   - {fileID: -5165622508294954507}
+>>>>>>> ff2c7489fa20ba1d2cd18eb3114e56d4fbd5f0d8
   - {fileID: 4719284215025965323}
   - {fileID: 8611389444005905076}
   - {fileID: -1641468665406572146}
