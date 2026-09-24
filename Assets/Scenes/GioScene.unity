@@ -1344,6 +1344,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2360795498031628371, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360795498031628371, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cec15b3c429304b17bd32464040b0bb6, type: 2}
     - target: {fileID: 3497069454454143804, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.8583
@@ -1408,6 +1416,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.012399999
       objectReference: {fileID: 0}
+    - target: {fileID: 7388433568921467437, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: cec15b3c429304b17bd32464040b0bb6, type: 2}
     - target: {fileID: 8557914562269888834, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.0124
@@ -1416,6 +1428,11 @@ PrefabInstance:
     - {fileID: 53117492666455747, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3503382476789360646, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+    - {fileID: 6246468477255118326, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+    - {fileID: 4632334378726634737, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+    - {fileID: 948144203822459759, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+    - {fileID: 6116691730095617937, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
+    - {fileID: 1039751507784818391, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3497069454454143804, guid: 5f39ae34e4c1ba4439f016d560e3c5ae, type: 3}
       insertIndex: -1
