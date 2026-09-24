@@ -14,12 +14,19 @@ public class NewSceneSwitcher : MonoBehaviour
     public InputActionReference b;
     public string newRoom;
     public Vector3 targetPos;
+
+    [Tooltip("Optional: if set, the button only switches scenes once this door is unlocked. Leave empty for no lock.")]
+    public DoorUnlock requiredDoor;
+
     // public XROrigin XRO;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         b.action.performed += (ctx) =>
         {
+            // Block the button shortcut until the keypad is solved
+            if (requiredDoor != null && !requiredDoor.IsUnlocked) return;
+
             SwitchScene(newRoom, targetPos);
         };
     }
@@ -28,7 +35,7 @@ public class NewSceneSwitcher : MonoBehaviour
     {
         b.action.Enable();
     }
-    
+
     void OnDisable()
     {
         b.action.Disable();
@@ -48,10 +55,10 @@ public class NewSceneSwitcher : MonoBehaviour
             IXRSelectInteractable heldInteractable = rh.interactablesSelected[0];
 
             rh.interactionManager.CancelInteractableSelection(heldInteractable);
-            
+
             // Access the actual GameObject
             GameObject heldObject = heldInteractable.transform.gameObject;
-            
+
             toMove.Add(heldObject);
         }
         if (lh.hasSelection)
@@ -60,10 +67,10 @@ public class NewSceneSwitcher : MonoBehaviour
             IXRSelectInteractable heldInteractable = lh.interactablesSelected[0];
 
             lh.interactionManager.CancelInteractableSelection(heldInteractable);
-            
+
             // Access the actual GameObject
             GameObject heldObject = heldInteractable.transform.gameObject;
-            
+
             toMove.Add(heldObject);
         }
         for (int i = 0; i < toMove.Count; i++)
