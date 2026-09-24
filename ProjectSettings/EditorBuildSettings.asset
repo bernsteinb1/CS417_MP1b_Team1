@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Bathrooms.unity
+    guid: d55f0a8e1b8be4c648c22374864c6ea3
+  - enabled: 1
     path: Assets/Scenes/GioScene.unity
     guid: 796beaa72d0a5486c8f8ca314002a250
   - enabled: 1
@@ -15,11 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StevenScene.unity
     guid: 53dd7101f3fc1bb4e80f5189dd2d576e
   - enabled: 1
-    path: Assets/Scenes/Bathrooms.unity
-    guid: d55f0a8e1b8be4c648c22374864c6ea3
-  - enabled: 1
     path: Assets/Scenes/RishiScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
+  - enabled: 1
+    path: Assets/Scenes/BathroomsSolved.unity
+    guid: 78d42cf2ea0db8f4392273163a5c2aef
+  - enabled: 1
+    path: Assets/Scenes/RishiSceneSolved.unity
+    guid: 4603cd539f5007f4cb3bb52cba490c69
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 949fb76c1b63dd04ba3ea97196192b52
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 8b8365df6af8eab49a8f3bbe4594cda3, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
