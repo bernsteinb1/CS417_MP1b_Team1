@@ -17,6 +17,9 @@ public class NewSceneSwitcher : MonoBehaviour {
 	XRBaseInteractable doorInteractable;
 	private static int lastSwitchFrame = -1;
 
+	[Tooltip("Optional: if set, this door won't switch scenes until this DoorUnlock is unlocked. Leave empty for no lock.")]
+	public DoorUnlock requiredDoor;
+
 	void Awake() {
 		if (doorInteractable == null) doorInteractable = GetComponentInParent<XRBaseInteractable>();
 		if (doorInteractable == null) Debug.LogError(name + ": no XRBaseInteractable found on this object or its parents");
@@ -33,6 +36,8 @@ public class NewSceneSwitcher : MonoBehaviour {
 
 	void OnPressed(InputAction.CallbackContext ctx) {
 		if (doorInteractable == null || !doorInteractable.isHovered) return;
+		// Door stays shut until the keypad is solved
+		if (requiredDoor != null && !requiredDoor.IsUnlocked) return;
 		SwitchScene(newRoom, targetPos);
 	}
 
