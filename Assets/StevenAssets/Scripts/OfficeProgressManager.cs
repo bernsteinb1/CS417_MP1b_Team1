@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class OfficeProgressManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class OfficeProgressManager : MonoBehaviour
 
     [Header("UI")]
     public TMP_Text progressText;
+
+    [Header("Completion Event")]
+    public UnityEvent onOfficeComplete = new UnityEvent();
 
     private bool exitOpened;
     public bool IsComplete => cardReaderSolved && usbPortSolved && doorPanelSolved;
@@ -37,7 +41,9 @@ public class OfficeProgressManager : MonoBehaviour
         if (exitOpened || !IsComplete) return;
         exitOpened = true;
         if (officeDoorMover != null) officeDoorMover.MoveToTarget();
-        Debug.Log("All office locks solved. Exit opened.");
+        if (GameStateManager.Instance != null) GameStateManager.Instance.MarkSolved(Room.Office);
+        onOfficeComplete?.Invoke();
+        Debug.Log("All office locks solved. Exit opened and Office marked solved globally.");
     }
 
     void UpdateProgressUI()

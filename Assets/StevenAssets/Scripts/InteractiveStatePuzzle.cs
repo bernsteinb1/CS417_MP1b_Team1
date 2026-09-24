@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InteractiveStatePuzzle : MonoBehaviour
 {
-    [Header("Configured at runtime by StevenOfficeBootstrap")]
+    [Header("Baked Scene References")]
     public Renderer[] currentLights;
     public Renderer[] targetLights;
     public Material onMaterial;
@@ -34,6 +34,13 @@ public class InteractiveStatePuzzle : MonoBehaviour
 
     public bool IsSolved => solved;
     public bool IsPowered => powered;
+
+    void Start()
+    {
+        if (state == null) state = (bool[])initialState.Clone();
+        UpdateVisuals();
+        SetStatus(powered ? "SYSTEM ONLINE - MATCH TARGET" : "INSERT USB TO POWER CONSOLE");
+    }
 
     public void Configure(Renderer[] current, Renderer[] target, Material onMat, Material offMat,
         TMP_Text status, TMP_Text movesLabel, Transform bookshelfTransform, Transform barsTransform)

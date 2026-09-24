@@ -9,6 +9,9 @@ public class LockSocket : MonoBehaviour
     [Header("References")]
     public OfficeProgressManager progressManager;
     public Transform snapPoint;
+    [Tooltip("If false, a valid key only needs to enter the trigger; it stays in the player's hand instead of snapping into the device.")]
+    public bool snapKeyOnSolve = true;
+    public bool freezeKeyOnSolve = true;
 
     [Header("Visual Feedback")]
     public Renderer statusRenderer;
@@ -42,14 +45,14 @@ public class LockSocket : MonoBehaviour
     {
         solved = true;
         Rigidbody rb = key.GetComponent<Rigidbody>();
-        if (rb != null)
+        if (rb != null && freezeKeyOnSolve)
         {
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
             rb.isKinematic = true;
         }
 
-        if (snapPoint != null)
+        if (snapKeyOnSolve && snapPoint != null)
         {
             key.transform.position = snapPoint.position;
             key.transform.rotation = snapPoint.rotation;

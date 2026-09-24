@@ -9,6 +9,7 @@ public class OfficeLossTimer : MonoBehaviour
     public InteractiveStatePuzzle puzzle;
 
     private float remaining;
+    public float RemainingSeconds => remaining;
     private bool expired;
 
     void Start()
