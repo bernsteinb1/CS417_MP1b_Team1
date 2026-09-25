@@ -3577,8 +3577,8 @@ MonoBehaviour:
   unlockdownClip: {fileID: 8300000, guid: 4c26694b1ca0dbb469ad02d7e15769fd, type: 3}
   successClip: {fileID: 8300000, guid: d48131eadaa17b64490050b813834e00, type: 3}
   shrinkDuration: 1
-  bathroomsExit: {fileID: 0}
-  officeExit: {fileID: 0}
+  bathroomsExit: {fileID: 3047043411806653976}
+  officeExit: {fileID: 3047043410716942691}
 --- !u!4 &408967651
 Transform:
   m_ObjectHideFlags: 0
@@ -23534,7 +23534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3047043411806653976
 GameObject:
   m_ObjectHideFlags: 0
@@ -23554,7 +23554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3047300469806332129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3283785463155816736, guid: e912fbd5396dace4dbdffbc8b79a6c14, type: 3}
