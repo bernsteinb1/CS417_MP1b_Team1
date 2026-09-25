@@ -5367,7 +5367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &131981416
 Transform:
   m_ObjectHideFlags: 0
@@ -10472,6 +10472,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
+      propertyPath: lh
+      value: 
+      objectReference: {fileID: 690714269}
+    - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
+      propertyPath: rh
+      value: 
+      objectReference: {fileID: 545043193}
+    - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: newRoom
       value: RishiScene
       objectReference: {fileID: 0}
@@ -10790,6 +10798,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1894698346962081461, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949038408604777197, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872342308020957174, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3415291899184941074, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -10881,6 +10901,10 @@ PrefabInstance:
     - target: {fileID: 6346075272810084383, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937666821697180323, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8444034111214298401, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Name
@@ -11282,6 +11306,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1894698346962081461, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949038408604777197, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872342308020957174, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3415291899184941074, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -11373,6 +11409,10 @@ PrefabInstance:
     - target: {fileID: 6346075272810084383, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937666821697180323, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8444034111214298401, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Name
@@ -32390,6 +32430,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1894698346962081461, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949038408604777197, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872342308020957174, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3415291899184941074, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -32482,6 +32534,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6937666821697180323, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8444034111214298401, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Name
       value: EmergencyLightBar (2)
@@ -32525,7 +32581,7 @@ PrefabInstance:
       objectReference: {fileID: 690714269}
     - target: {fileID: 1588515466760105785, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: newRoom
-      value: GioSceneSolved
+      value: GioScene
       objectReference: {fileID: 0}
     - target: {fileID: 3047043410848966854, guid: 289436588463e0b4585bf8ec0dff7b51, type: 3}
       propertyPath: m_Name
@@ -43099,6 +43155,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1894698346962081461, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949038408604777197, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872342308020957174, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3415291899184941074, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -43190,6 +43258,10 @@ PrefabInstance:
     - target: {fileID: 6346075272810084383, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937666821697180323, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8444034111214298401, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Name
@@ -43621,7 +43693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1585210679
 Transform:
   m_ObjectHideFlags: 0
@@ -50795,7 +50867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1903692287
 Transform:
   m_ObjectHideFlags: 0
@@ -51184,6 +51256,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1894698346962081461, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949038408604777197, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872342308020957174, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3415291899184941074, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -51275,6 +51359,10 @@ PrefabInstance:
     - target: {fileID: 6346075272810084383, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937666821697180323, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8444034111214298401, guid: c908ed6afbf11614f9e321278879d6f7, type: 3}
       propertyPath: m_Name
