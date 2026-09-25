@@ -394,15 +394,11 @@ public class AlyxShoulderInventory : MonoBehaviour
 
         if (rb != null)
         {
-            rb.linearVelocity =
-                Vector3.zero;
+            rb.isKinematic = false;
+            rb.useGravity = true;
 
-            rb.angularVelocity =
-                Vector3.zero;
-
-            StartCoroutine(
-                RetrievalPhysicsGraceRoutine(rb)
-            );
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
         // Strong successful-retrieve buzz.
