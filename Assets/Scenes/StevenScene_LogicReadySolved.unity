@@ -5516,14 +5516,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319819500}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7933534, y: 0, z: 0, w: 0.6087614}
   m_LocalPosition: {x: 0, y: 0.52, z: -0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 370224767}
   m_Father: {fileID: 81077239}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 105, y: 0, z: 0}
 --- !u!114 &319819502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10668,7 +10668,7 @@ Transform:
   m_GameObject: {fileID: 649827414}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: -4}
+  m_LocalPosition: {x: 0, y: 3.5, z: -4}
   m_LocalScale: {x: 1.95, y: 2.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18972,9 +18972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64197d5121c388e4eac4fbab0461ab26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OfficeProgressManager
-  cardReaderSolved: 0
-  usbPortSolved: 0
-  doorPanelSolved: 0
+  cardReaderSolved: 1
+  usbPortSolved: 1
+  doorPanelSolved: 1
   officeDoorMover: {fileID: 1550241909}
   progressText: {fileID: 345723251}
   onOfficeComplete:
@@ -19914,7 +19914,7 @@ Transform:
   m_GameObject: {fileID: 1178412454}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.93, z: -0.23}
+  m_LocalPosition: {x: 1, y: 0.93, z: -0.23}
   m_LocalScale: {x: 0.95, y: 0.38, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25918,7 +25918,7 @@ Transform:
   m_GameObject: {fileID: 1473847574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 0, z: 3.55}
+  m_LocalPosition: {x: -1.1, y: 0, z: 3.55}
   m_LocalScale: {x: 1, y: 1.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29426,7 +29426,7 @@ Transform:
   m_GameObject: {fileID: 1628672753}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.009}
+  m_LocalPosition: {x: 0, y: 0, z: -0.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32164,7 +32164,7 @@ Transform:
   m_GameObject: {fileID: 1780495682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.35, y: 0.93, z: -0.285}
+  m_LocalPosition: {x: 1.35, y: 0.93, z: -0.285}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.07}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34925,7 +34925,7 @@ Transform:
   m_GameObject: {fileID: 1934053129}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.82}
+  m_LocalPosition: {x: 0, y: 2.8, z: -0.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
