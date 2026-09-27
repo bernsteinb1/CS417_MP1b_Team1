@@ -20,12 +20,21 @@ public class TwoChoicePanelPuzzle : MonoBehaviour
     [TextArea] public string correctMessage = "CORRECT";
     [TextArea] public string wrongMessage = "TRY AGAIN";
 
+    [Header("Testing / Solved Scene")]
+    public bool startSolved;
+
     private bool solved;
 
     public bool IsSolved => solved;
 
     private void Start()
     {
+        if (startSolved)
+        {
+            solved = true;
+            prerequisiteSatisfied = true;
+        }
+
         RefreshStatus();
     }
 

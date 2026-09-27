@@ -21,7 +21,22 @@ public class OfficeProgressManager : MonoBehaviour
     private bool exitOpened;
     public bool IsComplete => cardReaderSolved && usbPortSolved && doorPanelSolved;
 
-    void Start() => UpdateProgressUI();
+    [Header("Testing / Solved Scene")]
+    public bool startSolved;
+    void Start()
+    {
+        if (startSolved)
+        {
+            cardReaderSolved = true;
+            usbPortSolved = true;
+            doorPanelSolved = true;
+
+            if (GameStateManager.Instance != null)
+                GameStateManager.Instance.MarkSolved(Room.Office);
+        }
+
+        UpdateProgressUI();
+    }
 
     public void CompleteLock(KeyIdentity.KeyType keyType)
     {

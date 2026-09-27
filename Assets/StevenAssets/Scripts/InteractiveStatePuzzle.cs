@@ -35,11 +35,32 @@ public class InteractiveStatePuzzle : MonoBehaviour
     public bool IsSolved => solved;
     public bool IsPowered => powered;
 
+    [Header("Testing / Solved Scene")]
+    public bool startSolved;
+
     void Start()
     {
-        if (state == null) state = (bool[])initialState.Clone();
+        if (startSolved)
+        {
+            solved = true;
+            powered = true;
+            state = (bool[])targetState.Clone();
+            moves = 5;
+
+            UpdateVisuals();
+            SetStatus("ACCESS GRANTED");
+            return;
+        }
+
+        if (state == null)
+            state = (bool[])initialState.Clone();
+
         UpdateVisuals();
-        SetStatus(powered ? "SYSTEM ONLINE - MATCH TARGET" : "INSERT USB TO POWER CONSOLE");
+        SetStatus(
+            powered
+                ? "SYSTEM ONLINE - MATCH TARGET"
+                : "INSERT USB TO POWER CONSOLE"
+        );
     }
 
     public void Configure(Renderer[] current, Renderer[] target, Material onMat, Material offMat,
