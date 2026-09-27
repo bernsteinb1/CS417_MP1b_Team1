@@ -20599,7 +20599,7 @@ MonoBehaviour:
   rh: {fileID: 1373153108}
   lh: {fileID: 1373153107}
   b: {fileID: 11711766586467970, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  newRoom: StevenScene
+  newRoom: StevenScene_LogicReady
   targetPos: {x: -5.5, y: 0.1, z: -17.1}
   requiredDoor: {fileID: 0}
 --- !u!114 &1588515467713432039
