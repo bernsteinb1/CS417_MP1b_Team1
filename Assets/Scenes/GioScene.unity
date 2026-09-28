@@ -32463,7 +32463,7 @@ MonoBehaviour:
   rh: {fileID: 1883230248343010320}
   lh: {fileID: 8877177980692095631}
   b: {fileID: 11711766586467970, guid: e0ca4504471ca124088e1e2cfe6804ae, type: 3}
-  newRoom: BathroomsSolved
+  newRoom: Bathrooms
   targetPos: {x: -5.5, y: 0.1, z: -17.1}
   requiredDoor: {fileID: 0}
 --- !u!114 &5663893676099873553
@@ -35333,6 +35333,7 @@ GameObject:
   - component: {fileID: 53017750909454417}
   - component: {fileID: 8612732899409573581}
   - component: {fileID: 8612732899409573584}
+  - component: {fileID: 8612732899409573585}
   - component: {fileID: 8612732899409573583}
   - component: {fileID: 8612732899409573582}
   m_Layer: 0
@@ -37015,9 +37016,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8612732899409573582}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 8612732899409573585}
+        m_TargetAssemblyTypeName: GameResetManager, Assembly-CSharp
+        m_MethodName: CompletelyRestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37074,6 +37075,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.18, z: 0.18}
   m_Center: {x: 0, y: 0.025000006, z: 0}
+--- !u!114 &8612732899409573585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647440080821843506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15817d356108d434398115abf8d06257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameResetManager
+  startingSceneName: StartingRoom
 --- !u!23 &8620882514365876514
 MeshRenderer:
   m_ObjectHideFlags: 0
