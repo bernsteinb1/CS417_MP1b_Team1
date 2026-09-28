@@ -28,6 +28,12 @@ public class GameStateManager : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 	}
 
+	public void ClearAllProgress() 
+	{
+   	 	solvedRooms.Clear();
+    	Debug.Log("Game Reset: All rooms marked as unsolved.");
+	}
+
 	public bool IsSolved(Room room) { return solvedRooms.Contains(room); }
 
 	public void MarkSolved(Room room) {

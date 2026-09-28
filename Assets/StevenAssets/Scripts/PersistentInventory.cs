@@ -67,6 +67,22 @@ public class PersistentInventory : MonoBehaviour
         return true;
     }
 
+    public void ClearInventory() 
+    {
+        foreach (GameObject item in storedItems) 
+        {
+            if (item != null) 
+            {
+                Destroy(item);
+            }
+        }
+
+
+        storedItems.Clear();
+
+        if (debugLogs) 
+        Debug.Log("Game Reset: Persistent inventory emptied.");
+    }
     public GameObject TakeLast()
     {
         if (storedItems.Count == 0)
