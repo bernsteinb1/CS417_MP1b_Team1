@@ -78,6 +78,7 @@ public class NewSceneSwitcher : MonoBehaviour {
 
 		if (newSceneName == "StevenScene_LogicReady") {
 			if (GameStateManager.Instance.IsSolved(Room.Office)) {
+			// if (true) {
 				SceneManager.LoadScene(newSceneName + "Solved");
 			} else {
 				SceneManager.LoadScene(newSceneName);
@@ -99,6 +100,7 @@ public class NewSceneSwitcher : MonoBehaviour {
 
 		} else if (newSceneName == "GioScene") {
 			if (GameStateManager.Instance.IsSolved(Room.UtilityCloset)) {
+			// if (true) {
 				SceneManager.LoadScene(newSceneName + "Solved");
 			} else {
 				SceneManager.LoadScene(newSceneName);

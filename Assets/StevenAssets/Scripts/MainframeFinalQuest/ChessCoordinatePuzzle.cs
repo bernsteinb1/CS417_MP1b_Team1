@@ -4,7 +4,7 @@ using UnityEngine;
 public class ChessCoordinatePuzzle : MonoBehaviour
 {
     [Header("Answer")]
-    [Range(0, 7)] public int answerFile = 1; // B
+    [Range(0, 7)] public int answerFile = 2; // C
     [Range(1, 8)] public int answerRank = 3; // 3
 
     [Header("UI")]
