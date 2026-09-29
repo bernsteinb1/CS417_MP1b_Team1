@@ -27035,14 +27035,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "MP1b STORY CHECKLIST \u2014 STEVEN\r\n\r\n1. Handmirror\r\n2. Magnifying
-    Glass\r\n3. Invisible Writing\r\n4. Blacklight\r\n5. Grab Signifiers\r\n6. Solid
-    Objects\r\n7. Red Herrings\r\n8. Inventory\r\n9. Collectibles\r\n10. Loss Timer\r\n11.
-    Progress Scoreboard\r\n12. Puzzle Scoreboard\r\n13. Puzzle System\r\n14. Puzzle
-    Content\r\n15. Puzzle Discoverability\r\n16. Key Props with Grab Affordances\r\n17.
-    Reveals\r\n18. Locks with Accepting Affordances\r\n19. Lock Signifiers\r\n20.
-    Repetition & Variety in Lock Mechanics\r\n21. Eased State Changes\r\n22. Escape
-    Signifiers\r\n23. Escaping the Room\r\n24. Gate Affordance"
+  m_text: 'CONTROLS:
+
+    Grab an item and move it over your left shoulder to store
+    it in your inventory.
+
+    Reach over your left shoulder and grab to retrieve
+    the most recently stored item.
+
+    You can carry important puzzle items between
+    rooms using this inventory.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -27069,8 +27071,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31
-  m_fontSizeBase: 31
+  m_fontSize: 65
+  m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -27108,7 +27110,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -37.760906, y: -48.311714, z: -38.413944, w: -44.128384}
+  m_margin: {x: -37.760906, y: -48.311714, z: -38.413944, w: -29.64854}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
