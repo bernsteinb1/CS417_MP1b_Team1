@@ -487,6 +487,88 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17152628}
   m_Mesh: {fileID: 5812244537472485142, guid: 8a37d340c272f444abb6da0be225705b, type: 3}
+--- !u!1 &47202398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 47202399}
+  - component: {fileID: 47202401}
+  - component: {fileID: 47202400}
+  m_Layer: 0
+  m_Name: LeftShoulderInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &47202399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47202398}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.2, y: -0.18, z: -0.12}
+  m_LocalScale: {x: 1.17647, y: 1.1764704, z: 1.17647}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1953962291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &47202400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47202398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ebf81675dda304da875141eb34f2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AlyxShoulderInventory
+  retrieveHand: {fileID: 288225617}
+  retrieveRadius: 0.35
+  spawnOffsetInHandSpace: {x: 0, y: 0, z: 0.05}
+  gripThreshold: 0.65
+  retrievalPhysicsGracePeriod: 0.35
+  useHaptics: 1
+  enterStowZoneHapticAmplitude: 0.2
+  enterStowZoneHapticDuration: 0.05
+  stowHapticAmplitude: 0.55
+  stowHapticDuration: 0.1
+  enterRetrieveZoneHapticAmplitude: 0.2
+  enterRetrieveZoneHapticDuration: 0.05
+  recallHapticAmplitude: 0.4
+  recallHapticDuration: 0.08
+  inventoryText: {fileID: 0}
+  debugLogs: 1
+--- !u!135 &47202401
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47202398}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.18
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &48170664
 GameObject:
   m_ObjectHideFlags: 0
@@ -39989,7 +40071,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 47202399}
   m_Father: {fileID: 2030585106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &1953962292
