@@ -84,12 +84,14 @@ public class NewSceneSwitcher : MonoBehaviour {
 			}
 		} else if (newSceneName == "RishiScene") {
 			if (GameStateManager.Instance.IsSolved(Room.Classroom)) {
+			// if (true) {
 				SceneManager.LoadScene(newSceneName + "Solved");
 			} else {
 				SceneManager.LoadScene(newSceneName);
 			}
 		} else if (newSceneName == "Bathrooms") {
 			if (GameStateManager.Instance.IsSolved(Room.Bathroom)) {
+			// if (true) {
 				SceneManager.LoadScene(newSceneName + "Solved");
 			} else {
 				SceneManager.LoadScene(newSceneName);

@@ -4749,7 +4749,7 @@ Transform:
   m_GameObject: {fileID: 190181390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.102, y: 0.135, z: -1.137}
+  m_LocalPosition: {x: -2.102, y: 0.037, z: -1.137}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7989,6 +7989,7 @@ GameObject:
   - component: {fileID: 321084505}
   - component: {fileID: 321084504}
   - component: {fileID: 321084503}
+  - component: {fileID: 321084507}
   m_Layer: 0
   m_Name: GoldenKey_ToiletPlunger
   m_TagString: Untagged
@@ -8005,7 +8006,7 @@ Transform:
   m_GameObject: {fileID: 321084501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.5109005, y: 0.57, z: 1.6}
+  m_LocalPosition: {x: 16.22, y: 0.57, z: 1.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8026,6 +8027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b42f62b090a4ecf9b3582fd30cf21a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoldenPlunger
+  goldenCardPrefab: {fileID: 8580395798420966189, guid: a92e4dd70714f1142bedbd44b387b854, type: 3}
   cardAttachPoint: {fileID: 221834086}
 --- !u!114 &321084504
 MonoBehaviour:
@@ -8207,6 +8209,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &321084507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321084501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd8d24c9f3111cb428def96347c8039b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryStowable
 --- !u!1 &325866028
 GameObject:
   m_ObjectHideFlags: 0
@@ -13977,7 +13991,7 @@ Transform:
   m_GameObject: {fileID: 545414636}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.535, y: 0.135, z: -0.64}
+  m_LocalPosition: {x: -0.535, y: 0.037, z: -0.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26112,7 +26126,7 @@ GameObject:
   - component: {fileID: 923778804}
   - component: {fileID: 923778803}
   m_Layer: 0
-  m_Name: Steven_FinalMainframeQuest_BAKED
+  m_Name: StevenFinalMainframeQuest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

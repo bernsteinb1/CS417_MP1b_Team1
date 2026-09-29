@@ -24722,7 +24722,7 @@ GameObject:
   - component: {fileID: 741846461}
   - component: {fileID: 741846460}
   m_Layer: 0
-  m_Name: GoldenKey_ToiletPlungerTrigger_BAKED
+  m_Name: GoldenKey_ToiletPlungerTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24774,8 +24774,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.45, y: 0.35, z: 0.45}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.28, y: 0.28, z: 0.35}
+  m_Center: {x: 0, y: -0.3, z: 0.1}
 --- !u!1 &742065749
 GameObject:
   m_ObjectHideFlags: 0

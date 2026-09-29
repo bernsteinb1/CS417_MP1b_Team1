@@ -4,56 +4,75 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 [RequireComponent(typeof(Rigidbody))]
 public class GoldenPlunger : MonoBehaviour
 {
-    public Transform cardAttachPoint;
+    [Header("Golden card")]
+    [Tooltip("Assign Assets/StevenAssets/Prefabs/Gold Card.prefab here.")]
+    public GameObject goldenCardPrefab;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    public Transform cardAttachPoint;
 
     public void AttachGoldenCard()
     {
-        if (GoldenKeyQuestState.CardRetrieved) return;
-        GoldenKeyQuestState.CardRetrieved = true;
+        if (GoldenKeyQuestState.CardRetrieved)
+            return;
+
+        if (goldenCardPrefab == null)
+        {
+            Debug.LogError(
+                "GoldenPlunger: Golden Card prefab is not assigned. " +
+                "Drag Assets/StevenAssets/Prefabs/Gold Card.prefab into the " +
+                "Golden Card Prefab field on GoldenKey_ToiletPlunger.",
+                this);
+            return;
+        }
 
         if (cardAttachPoint == null)
         {
-            var attach = new GameObject("GoldenCardAttachPoint");
+            GameObject attach = new GameObject("GoldenCardAttachPoint");
             attach.transform.SetParent(transform, false);
             attach.transform.localPosition = new Vector3(0f, -0.24f, 0f);
             cardAttachPoint = attach.transform;
         }
 
-        var card = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        GameObject card = Instantiate(goldenCardPrefab, cardAttachPoint, false);
         card.name = "GoldenKeycard";
-        card.transform.SetParent(cardAttachPoint, false);
         card.transform.localPosition = Vector3.zero;
         card.transform.localRotation = Quaternion.Euler(0f, 0f, 90f);
-        card.transform.localScale = new Vector3(0.16f, 0.018f, 0.10f);
 
-        var renderer = card.GetComponent<Renderer>();
-        var shader = Shader.Find("Universal Render Pipeline/Lit");
-        if (shader != null)
-        {
-            var mat = new Material(shader) { name = "M_GoldenKeycard_Runtime" };
-            mat.color = new Color(1f, 0.62f, 0.06f, 1f);
-            mat.EnableKeyword("_EMISSION");
-            mat.SetColor("_EmissionColor", new Color(2.7f, 1.3f, 0.08f, 1f));
-            renderer.material = mat;
-        }
+        // Do not inherit a strange scale from the plunger hierarchy.
+        // The prefab keeps its authored local scale.
 
-        var rb = card.AddComponent<Rigidbody>();
+        Rigidbody rb = card.GetComponent<Rigidbody>();
+        if (rb == null)
+            rb = card.AddComponent<Rigidbody>();
+
         rb.mass = 0.15f;
         rb.isKinematic = true;
         rb.useGravity = false;
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
 
-        var grab = card.AddComponent<XRGrabInteractable>();
+        XRGrabInteractable grab = card.GetComponent<XRGrabInteractable>();
+        if (grab == null)
+            grab = card.AddComponent<XRGrabInteractable>();
         grab.throwOnDetach = true;
 
-        var key = card.AddComponent<GoldenKeycard>();
+        if (card.GetComponentInChildren<Collider>(true) == null)
+            card.AddComponent<BoxCollider>();
+
+        InventoryStowable stowable = card.GetComponent<InventoryStowable>();
+        if (stowable == null)
+            card.AddComponent<InventoryStowable>();
+
+        GoldenKeycard key = card.GetComponent<GoldenKeycard>();
+        if (key == null)
+            key = card.AddComponent<GoldenKeycard>();
+
         key.grab = grab;
         key.body = rb;
-        key.visualRenderer = renderer;
         key.DetachOnFirstGrab = true;
+        key.ApplyGoldPulseNow();
+
+        GoldenKeyQuestState.CardRetrieved = true;
+        Debug.Log("GoldenPlunger: instantiated Gold Card prefab and attached it to the plunger.");
     }
 }
