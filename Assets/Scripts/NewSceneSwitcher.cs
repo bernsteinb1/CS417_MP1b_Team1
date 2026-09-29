@@ -76,7 +76,7 @@ public class NewSceneSwitcher : MonoBehaviour {
 			DontDestroyOnLoad(toMove[i]);
 		}
 
-		if (newSceneName == "StevenScene") {
+		if (newSceneName == "StevenScene_LogicReady") {
 			if (GameStateManager.Instance.IsSolved(Room.Office)) {
 				SceneManager.LoadScene(newSceneName + "Solved");
 			} else {

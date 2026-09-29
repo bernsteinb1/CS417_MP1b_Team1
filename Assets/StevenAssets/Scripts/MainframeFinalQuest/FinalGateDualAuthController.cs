@@ -18,7 +18,7 @@ public class FinalGateDualAuthController : MonoBehaviour
         if (gateStatus != null)
         {
             string card = GoldenKeyQuestState.CardScanned ? "GOLD CARD: OK" : "GOLD CARD: MISSING";
-            string chess = GoldenKeyQuestState.ChessSolved ? "CHESS ROUTE: OK" : "CHESS ROUTE: UNSOLVED";
+            string chess = GoldenKeyQuestState.ChessSolved ? "CHESS COORDINATE: OK" : "CHESS COORDINATE: UNSOLVED";
             gateStatus.text = ready
                 ? $"{card}\n{chess}\nFINAL LASER: OPEN"
                 : $"{card}\n{chess}\nFINAL LASER: LOCKED";

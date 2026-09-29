@@ -31,7 +31,7 @@ public static class StevenFinalMainframeQuestBaker
 
             EditorUtility.DisplayDialog(
                 "Final Mainframe Quest Baked",
-                "Done. The quest objects are now saved directly into StevenScene_LogicReadySolved and BathroomsSolved.\n\nNo runtime setup/bake component is required.",
+                "Done. The wall note/panel, gold-card reader, plunger, and floor-coordinate clues are saved directly into StevenScene_LogicReadySolved. The toilet receiver is saved in BathroomsSolved.\n\nThe floor-only root is named Steven_ChessFloorClues_COPY_TO_LOGICREADY so it can be copied into StevenScene_LogicReady later.",
                 "OK");
         }
         finally
@@ -45,7 +45,7 @@ public static class StevenFinalMainframeQuestBaker
     {
         Scene scene = EditorSceneManager.OpenScene(MainframeScene, OpenSceneMode.Single);
 
-        FinalMainframeQuestSetup setup = Object.FindFirstObjectByType<FinalMainframeQuestSetup>();
+        FinalMainframeQuestSetup setup = Object.FindAnyObjectByType<FinalMainframeQuestSetup>();
         GameObject temp = null;
         if (setup == null)
         {
@@ -55,8 +55,11 @@ public static class StevenFinalMainframeQuestBaker
 
         setup.BakeIntoScene();
 
-        foreach (FinalMainframeQuestSetup s in Object.FindObjectsByType<FinalMainframeQuestSetup>(FindObjectsSortMode.None))
-            Object.DestroyImmediate(s.gameObject.name.StartsWith("TEMP_") ? s.gameObject : s);
+        foreach (FinalMainframeQuestSetup s in Object.FindObjectsByType<FinalMainframeQuestSetup>(FindObjectsInactive.Include))
+        {
+            if (s.gameObject.name.StartsWith("TEMP_")) Object.DestroyImmediate(s.gameObject);
+            else Object.DestroyImmediate(s);
+        }
 
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);
@@ -66,7 +69,7 @@ public static class StevenFinalMainframeQuestBaker
     {
         Scene scene = EditorSceneManager.OpenScene(BathroomScene, OpenSceneMode.Single);
 
-        BathroomGoldenCardSetup setup = Object.FindFirstObjectByType<BathroomGoldenCardSetup>();
+        BathroomGoldenCardSetup setup = Object.FindAnyObjectByType<BathroomGoldenCardSetup>();
         GameObject temp = null;
         if (setup == null)
         {
@@ -76,8 +79,11 @@ public static class StevenFinalMainframeQuestBaker
 
         setup.BakeIntoScene();
 
-        foreach (BathroomGoldenCardSetup s in Object.FindObjectsByType<BathroomGoldenCardSetup>(FindObjectsSortMode.None))
-            Object.DestroyImmediate(s.gameObject.name.StartsWith("TEMP_") ? s.gameObject : s);
+        foreach (BathroomGoldenCardSetup s in Object.FindObjectsByType<BathroomGoldenCardSetup>(FindObjectsInactive.Include))
+        {
+            if (s.gameObject.name.StartsWith("TEMP_")) Object.DestroyImmediate(s.gameObject);
+            else Object.DestroyImmediate(s);
+        }
 
         EditorSceneManager.MarkSceneDirty(scene);
         EditorSceneManager.SaveScene(scene);
