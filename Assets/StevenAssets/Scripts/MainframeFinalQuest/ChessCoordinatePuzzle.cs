@@ -70,7 +70,7 @@ public class ChessCoordinatePuzzle : MonoBehaviour
         if (GoldenKeyQuestState.ChessSolved)
         {
             solved = true;
-            SetStatus("B3 ACCEPTED // COMMON NEIGHBOR VERIFIED");
+            SetStatus("C3 ACCEPTED // SHORTEST-PATH AUTH VERIFIED");
         }
         else
         {

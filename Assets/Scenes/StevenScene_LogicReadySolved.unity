@@ -51364,7 +51364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac8a7d6de1f4fae9ed965920763f82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChessCoordinatePuzzle
-  answerFile: 1
+  answerFile: 2
   answerRank: 3
   coordinateText: {fileID: 1747628673}
   statusText: {fileID: 625379541}
