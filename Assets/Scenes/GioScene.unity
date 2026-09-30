@@ -6708,10 +6708,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "no way you came to my school, huge fan of your work!!! \nIf you get trapped
-    in there, perfessor Livingston told me the code is ''417'\n\n- Gio\n\nP.S I think
-    you need you need something from this room to get past the mainframe door in
-    the office. Check the power room.. Good Luck!"
+  m_text: "Yoo are you okay? I was passing by and heard the alarms. If you're stuck
+    in there, I overheard the Professor say the code to the utility room was '417'.
+    I dont know if that's accurate but if you get this, I hope it helps. \n\n- Gio\n\nP.S
+    He also mentioned something about a key to the mainframe door in the office being
+    in the power room..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6738,8 +6739,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.21
-  m_fontSizeBase: 0.21
+  m_fontSize: 0.19
+  m_fontSizeBase: 0.19
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
