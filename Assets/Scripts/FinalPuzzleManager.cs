@@ -3,34 +3,53 @@ using UnityEngine;
 public class FinalPuzzleManager : MonoBehaviour
 {
     public static FinalPuzzleManager Instance { get; private set; }
-    bool[] isSolved = new bool[] { false, false, false, false };
+
+    private bool[] isSolved = new bool[] { false, false, false, false };
+
     public GameObject[] doors = new GameObject[4];
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Awake()
     {
-        // Check if an instance already exists in the scene
         if (Instance != null && Instance != this)
         {
+            // Reconnect persistent state to the newly loaded scene's doors.
+            Instance.doors = doors;
             Instance.OpenDoors();
-            Destroy(gameObject); // Destroy duplicate instances
+
+            Destroy(gameObject);
             return;
         }
 
-        // Set the active instance and protect it from scene destruction
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        OpenDoors();
     }
 
     public void OpenDoors()
     {
-        for (int i = 0; i < 4; i++)
+        if (doors == null)
+            return;
+
+        for (int i = 0; i < isSolved.Length && i < doors.Length; i++)
         {
-            if (isSolved[i]) doors[i].SetActive(false);
+            if (isSolved[i] && doors[i] != null)
+                doors[i].SetActive(false);
         }
     }
 
     public void SolveDoor(int i)
     {
+        if (i < 0 || i >= isSolved.Length)
+            return;
+
         isSolved[i] = true;
+
+        if (doors != null &&
+            i < doors.Length &&
+            doors[i] != null)
+        {
+            doors[i].SetActive(false);
+        }
     }
 }
