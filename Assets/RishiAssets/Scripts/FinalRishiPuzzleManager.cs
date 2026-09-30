@@ -52,6 +52,7 @@ public class FinalRishiPuzzleManager : MonoBehaviour {
 		speakerSource.PlayOneShot(successClip);
 
 		laserDoor.SetActive(false);
+		FinalPuzzleManager.Instance.SolveDoor(2);
 		Debug.Log("YOU HAVE SOLVED RISHI'S FINAL PUZZLE");
 	}
 

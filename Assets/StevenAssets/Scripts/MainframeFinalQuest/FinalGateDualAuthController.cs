@@ -12,8 +12,10 @@ public class FinalGateDualAuthController : MonoBehaviour
             finalLaserDoor = GameObject.Find("LaserDoorSteven");
 
         bool ready = GoldenKeyQuestState.FinalGateReady;
-        if (finalLaserDoor != null && finalLaserDoor.activeSelf == ready)
+        if (finalLaserDoor != null && finalLaserDoor.activeSelf == ready) {
             finalLaserDoor.SetActive(!ready);
+            FinalPuzzleManager.Instance.SolveDoor(3);
+        }
 
         if (gateStatus != null)
         {

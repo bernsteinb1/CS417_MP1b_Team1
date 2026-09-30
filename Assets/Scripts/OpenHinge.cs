@@ -5,7 +5,6 @@ public class OpenHinge : MonoBehaviour
 {
     private JointSpring s;
     private float velocity = 0;
-    float prev_error = 0;
     public float acceleration;
     public float dampingForce;
     private AudioSource se;
