@@ -1,55 +1,37 @@
 using UnityEngine;
 
-public class FinalPuzzleManager : MonoBehaviour
-{
-    public static FinalPuzzleManager Instance { get; private set; }
+public class FinalPuzzleManager : MonoBehaviour {
+	public static FinalPuzzleManager Instance { get; private set; }
 
-    private bool[] isSolved = new bool[] { false, false, false, false };
+	private static bool[] isSolved = new bool[] { false, false, false, false };
 
-    public GameObject[] doors = new GameObject[4];
+	public GameObject[] doors = new GameObject[4];
 
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            // Reconnect persistent state to the newly loaded scene's doors.
-            Instance.doors = doors;
-            Instance.OpenDoors();
+	void Awake() {
+		Instance = this;
+		OpenDoors();
+	}
 
-            Destroy(gameObject);
-            return;
-        }
+	public void OpenDoors() {
+		if (doors == null)
+			return;
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+		for (int i = 0; i < isSolved.Length && i < doors.Length; i++) {
+			if (isSolved[i] && doors[i] != null)
+				doors[i].SetActive(false);
+		}
+	}
 
-        OpenDoors();
-    }
+	public void SolveDoor(int i) {
+		if (i < 0 || i >= isSolved.Length)
+			return;
 
-    public void OpenDoors()
-    {
-        if (doors == null)
-            return;
+		isSolved[i] = true;
 
-        for (int i = 0; i < isSolved.Length && i < doors.Length; i++)
-        {
-            if (isSolved[i] && doors[i] != null)
-                doors[i].SetActive(false);
-        }
-    }
-
-    public void SolveDoor(int i)
-    {
-        if (i < 0 || i >= isSolved.Length)
-            return;
-
-        isSolved[i] = true;
-
-        if (doors != null &&
-            i < doors.Length &&
-            doors[i] != null)
-        {
-            doors[i].SetActive(false);
-        }
-    }
+		if (doors != null &&
+			i < doors.Length &&
+			doors[i] != null) {
+			doors[i].SetActive(false);
+		}
+	}
 }
